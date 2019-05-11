@@ -16,4 +16,14 @@ let data = [{
     title: "Estudar React"
 }];
 
-console.log(data);
+data.forEach(task => {
+    let li = document.createElement('li');
+
+    li.innerHTML = `
+    <input type="checkbox" id="task-${task.id}">
+    <label for="${task.id}">${task.title}</label>
+    `;
+
+    document.querySelector('.todo').append(li);
+
+});
