@@ -19,6 +19,7 @@ let data = [{
 data.forEach(task => {
     let li = document.createElement('li');
 
+    //Template da lista de tarefas    
     li.innerHTML = `
     <input type="checkbox" id="task-${task.id}">
     <label for="${task.id}">${task.title}</label>
