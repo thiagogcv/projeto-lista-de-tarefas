@@ -25,6 +25,19 @@ data.forEach(task => {
     <label for="${task.id}">${task.title}</label>
     `;
 
+    //Adicionado evento de ckecked na lista de tarefa completada
+    li.querySelector('input').addEventListener('change', e =>{
+
+        if(e.target.checked){
+            li.classList.add('complete')
+
+        }else{
+            li.classList.remove('complete')
+        }
+
+         
+    })
+
     document.querySelector('.todo').append(li);
 
 });
